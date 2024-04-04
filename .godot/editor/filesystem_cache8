@@ -1,0 +1,146 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1712186357
+box.tscn::PackedScene::1569778386390641064::1711410397::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1712115404::0::1::::<><>::
+icon.svg::CompressedTexture2D::7571036408030451725::1711071365::1711071391::1::::<><>::
+::res://addons/::1712115786
+::res://addons/silent_wolf/::1712125868
+plugin.cfg::TextFile::-1::1712115786::0::1::::<><>::
+SilentWolf.gd::GDScript::-1::1712125868::0::1::::<>Node<>::
+silent_wolf.gd::GDScript::-1::1712115786::0::1::::<>EditorPlugin<>::
+::res://addons/silent_wolf/assets/::1712115791
+::res://addons/silent_wolf/assets/fonts/::1712122686
+Comfortaa-Bold.ttf::FontFile::271040723689385196::1712115790::1712122686::1::::<><>::
+::res://addons/silent_wolf/assets/gfx/::1712122687
+checkbox_checked.png::CompressedTexture2D::3468020692350256878::1712115791::1712122686::1::::<><>::
+checkbox_unchecked.png::CompressedTexture2D::2846717820554890245::1712115791::1712122686::1::::<><>::
+dummy_info_icon_small.png::CompressedTexture2D::428710156687873495::1712115791::1712122686::1::::<><>::
+info_icon.png::CompressedTexture2D::2716626596262750719::1712115791::1712122687::1::::<><>::
+info_icon_small.png::CompressedTexture2D::7719019821522443599::1712115791::1712122686::1::::<><>::
+::res://addons/silent_wolf/assets/themes/::1712115791
+sw_theme.tres::Theme::9062636269328026305::1712115792::0::1::::<><>::uid://d4kabkagmfeq::::res://addons/silent_wolf/assets/fonts/Comfortaa-Bold.ttf
+::res://addons/silent_wolf/Auth/::1712115787
+Auth.gd::GDScript::-1::1712115787::0::1::::<>Node<>::
+ConfirmEmail.gd::GDScript::-1::1712115787::0::1::::<>TextureRect<>::
+ConfirmEmail.tscn::PackedScene::3666020689521619779::1712115787::0::1::::<><>::res://addons/silent_wolf/Auth/ConfirmEmail.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn
+Login.gd::GDScript::-1::1712115787::0::1::::<>TextureRect<>::
+Login.tscn::PackedScene::3014700595930598416::1712115787::0::1::::<><>::res://addons/silent_wolf/Auth/Login.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn<>uid://bpn62aabunxva::::res://addons/silent_wolf/assets/gfx/checkbox_checked.png<>uid://bgs8a50ilk5cj::::res://addons/silent_wolf/assets/gfx/checkbox_unchecked.png
+Register.gd::GDScript::-1::1712115787::0::1::::<>TextureRect<>::
+Register.tscn::PackedScene::5311945745348205939::1712115788::0::1::::<><>::res://addons/silent_wolf/Auth/Register.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn<>uid://dh8fem1lgom04::::res://addons/silent_wolf/assets/gfx/info_icon_small.png<>uid://gdw18po2h7hb::::res://addons/silent_wolf/assets/gfx/dummy_info_icon_small.png
+RegisterUsernamePassword.tscn::PackedScene::1289353403102707883::1712115787::0::1::::<><>::res://addons/silent_wolf/Auth/Register.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn<>uid://dh8fem1lgom04::::res://addons/silent_wolf/assets/gfx/info_icon_small.png<>uid://gdw18po2h7hb::::res://addons/silent_wolf/assets/gfx/dummy_info_icon_small.png
+ResetPassword.gd::GDScript::-1::1712115787::0::1::::<>TextureRect<>::
+ResetPassword.tscn::PackedScene::7942062648086173727::1712115787::0::1::::<><>::res://addons/silent_wolf/Auth/ResetPassword.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn
+::res://addons/silent_wolf/common/::1712115789
+SWButton.tscn::PackedScene::5568296785936591155::1712115789::0::1::::<><>::
+::res://addons/silent_wolf/examples/::1712115789
+::res://addons/silent_wolf/examples/CustomLeaderboards/::1712115790
+ReverseLeaderboard.gd::GDScript::-1::1712115790::0::1::::<>Node2D<>::
+ReverseLeaderboard.tscn::PackedScene::7502756930110382987::1712115790::0::1::::<><>::uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn<>res://addons/silent_wolf/examples/CustomLeaderboards/ReverseLeaderboard.gd
+SmallScoreItem.tscn::PackedScene::3554781840265839843::1712115789::0::1::::<><>::uid://2wy4d8d5av0l::::res://addons/silent_wolf/Scores/ScoreItem.tscn
+TimeBasedLboards.gd::GDScript::-1::1712115789::0::1::::<>Node2D<>::
+TimeBasedLboards.tscn::PackedScene::3698473064175662389::1712115790::0::1::::<><>::uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn<>res://addons/silent_wolf/examples/CustomLeaderboards/TimeBasedLboards.gd
+::res://addons/silent_wolf/Muliplayer/::1712115792
+Multiplayer.gd::GDScript::-1::1712115792::0::1::::<>Node<>::
+::res://addons/silent_wolf/Muliplayer/ws/::1712115792
+WSClient.gd::GDScript::-1::1712115792::0::1::::<>Node<>::
+::res://addons/silent_wolf/Multiplayer/::1712115792
+Multiplayer.gd::GDScript::-1::1712115792::0::1::::<>Node<>::
+::res://addons/silent_wolf/Multiplayer/ws/::1712115792
+WSClient.gd::GDScript::-1::1712115792::0::1::::<>Node<>::
+::res://addons/silent_wolf/Players/::1712115788
+Players.gd::GDScript::-1::1712115788::0::1::::<>Node<>::
+::res://addons/silent_wolf/Scores/::1712115788
+Leaderboard.gd::GDScript::-1::1712115788::0::1::::<>Node2D<>::
+Leaderboard.tscn::PackedScene::4297999345383651085::1712115788::0::1::::<><>::res://addons/silent_wolf/Scores/Leaderboard.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn
+ScoreItem.tscn::PackedScene::1942024293390844209::1712115788::0::1::::<><>::
+Scores.gd::GDScript::-1::1712115788::0::1::::<>Node<>::
+::res://addons/silent_wolf/utils/::1712115789
+SWHashing.gd::GDScript::-1::1712115789::0::1::::<>Node<>::
+SWHttpUtils.gd::GDScript::-1::1712115789::0::1::::<>Node<>::
+SWLocalFileStorage.gd::GDScript::-1::1712115788::0::1::::<>Node<>::
+SWLogger.gd::GDScript::-1::1712115789::0::1::::<>Node<>::
+SWUtils.gd::GDScript::-1::1712115789::0::1::::<>Node<>::
+UUID.gd::GDScript::-1::1712115789::0::1::::<>RefCounted<>::
+::res://assets/::1711513466
+::res://assets/Background/::1711411926
+Blue.png::CompressedTexture2D::7203484970964786194::1711410883::1711411926::1::::<><>::
+Brown.png::CompressedTexture2D::371620201626609265::1711410883::1711411926::1::::<><>::
+Gray.png::CompressedTexture2D::4617171611840945711::1711410883::1711411925::1::::<><>::
+Green.png::CompressedTexture2D::2344367740212914328::1711410883::1711411925::1::::<><>::
+Pink.png::CompressedTexture2D::3087112604094010611::1711410883::1711411925::1::::<><>::
+Purple.png::CompressedTexture2D::8062298383317910790::1711410883::1711411925::1::::<><>::
+Yellow.png::CompressedTexture2D::9108541488155741017::1711410883::1711411925::1::::<><>::
+::res://assets/Main Characters/::1711513527
+::res://assets/Main Characters/Ninja Frog/::1711411925
+Double Jump (32x32).png::CompressedTexture2D::8937961514008221595::1711410886::1711411925::1::::<><>::
+Fall (32x32).png::CompressedTexture2D::7158148675046562509::1711410886::1711411925::1::::<><>::
+Hit (32x32).png::CompressedTexture2D::2505668391508470656::1711410886::1711411924::1::::<><>::
+Idle (32x32).png::CompressedTexture2D::9207533814427803310::1711410886::1711411924::1::::<><>::
+Jump (32x32).png::CompressedTexture2D::9063027085942868544::1711410886::1711411924::1::::<><>::
+Run (32x32).png::CompressedTexture2D::6767142812076701872::1711410886::1711411924::1::::<><>::
+Wall Jump (32x32).png::CompressedTexture2D::7358825249043913737::1711410886::1711411924::1::::<><>::
+::res://assets/Platform Game Assets/::1711513430
+::res://assets/Platform Game Assets/Enemies/::1711410926
+::res://assets/Platform Game Assets/Enemies/ai/::1711410925
+::res://assets/Platform Game Assets/Enemies/eps/::1711410926
+::res://assets/Platform Game Assets/Enemies/png/::1711410928
+::res://assets/Platform Game Assets/Enemies/png/32x32/::1711411939
+Spike_Down.png::CompressedTexture2D::902240341350131971::1711410928::1711411939::1::::<><>::
+Spike_Left&Right.png::CompressedTexture2D::9156035389856306474::1711410928::1711411939::1::::<><>::
+Spike_Up.png::CompressedTexture2D::8069876629425462589::1711410928::1711411939::1::::<><>::
+::res://assets/Platform Game Assets/Enemies/png/64x64/::1711411939
+Spike_Down.png::CompressedTexture2D::8424423150585472135::1711410929::1711411939::1::::<><>::
+Spike_Left&Right.png::CompressedTexture2D::974312776866246582::1711410929::1711411939::1::::<><>::
+Spike_Up.png::CompressedTexture2D::2617728826709547593::1711410929::1711411939::1::::<><>::
+::res://assets/Platform Game Assets/Enemies/png/128x128/::1711411939
+Mac 128.png::CompressedTexture2D::2834446061853954045::1711410927::1711411939::1::::<><>::
+Mace.png::CompressedTexture2D::4711518356318945947::1711410927::1711411938::1::::<><>::
+Saw.png::CompressedTexture2D::1150584945582887315::1711410927::1711411938::1::::<><>::
+Spike_down.png::CompressedTexture2D::696726038822314479::1711410927::1711411939::1::::<><>::
+Spike_Left&down.png::CompressedTexture2D::2393877987089863085::1711410927::1711411938::1::::<><>::
+Spike_Up.png::CompressedTexture2D::5728504856283732875::1711410927::1711411938::1::::<><>::
+::res://assets/Platform Game Assets/Enemies/png/256x256/::1711529181
+eye 256.png::CompressedTexture2D::5776855383777777490::1711410927::1711411938::1::::<><>::
+Eyelid 256.png::CompressedTexture2D::3089480754509751668::1711410927::1711411938::1::::<><>::
+Mac 256.png::CompressedTexture2D::3465163109827198824::1711410927::1711411938::1::::<><>::
+Mace.png::CompressedTexture2D::6698946256988329952::1711410928::1711411938::1::::<><>::
+new eye.png::CompressedTexture2D::7288898689365019437::1711529178::1711529181::1::::<><>::
+Pupil 256.png::CompressedTexture2D::4635295916618158247::1711410928::1711411937::1::::<><>::
+Saw.png::CompressedTexture2D::694774361458631483::1711410928::1711411937::1::::<><>::
+::res://assets/Platform Game Assets/Enemies/png/512x512/::1711411937
+eye 512.png::CompressedTexture2D::6986024774428545519::1711410928::1711411937::1::::<><>::
+Eyelid 512.png::CompressedTexture2D::3549561877498396473::1711410928::1711411937::1::::<><>::
+Mac 512.png::CompressedTexture2D::6383412804644955938::1711410928::1711411937::1::::<><>::
+Mace.png::CompressedTexture2D::2330645234052264778::1711410928::1711411937::1::::<><>::
+Pupil 512.png::CompressedTexture2D::4647476917044706786::1711410928::1711411936::1::::<><>::
+Saw.png::CompressedTexture2D::7188711359760491127::1711410928::1711411936::1::::<><>::
+::res://assets/Traps/::1711513357
+::res://assets/Traps/Rock Head/::1711513357
+Blink (42x42).png::CompressedTexture2D::7216991212649206267::1711410893::1711411930::1::::<><>::
+Bottom Hit (42x42).png::CompressedTexture2D::206597351430041575::1711410893::1711411934::1::::<><>::
+Idle.png::CompressedTexture2D::1332090757455102924::1711410893::1711411934::1::::<><>::
+Left Hit (42x42).png::CompressedTexture2D::1776649004422942934::1711410894::1711411934::1::::<><>::
+Right Hit (42x42).png::CompressedTexture2D::4213320245540879915::1711410894::1711411934::1::::<><>::
+Top Hit (42x42).png::CompressedTexture2D::2964342305440758968::1711410894::1711411934::1::::<><>::
+::res://frog-game/::1711580809
+::res://scenes/::1712191438
+diving_enemy.tscn::PackedScene::8173777515186245106::1712191438::0::1::::<><>::res://scripts/diving_enemy.gd<>uid://db32djssj3ek0::::res://assets/Platform Game Assets/Enemies/png/256x256/new eye.png<>uid://b7bmv8m47ee7x::::res://assets/Platform Game Assets/Enemies/png/256x256/Pupil 256.png
+floor_enemy.tscn::PackedScene::5966716972281672104::1712191438::0::1::::<><>::res://scripts/floor_enemy.gd<>uid://s8jlthos7dqa::::res://assets/Traps/Rock Head/Idle.png
+flying_enemy.tscn::PackedScene::2133872539273153776::1712191438::0::1::::<><>::res://scripts/flying_enemy.gd<>uid://b7bmv8m47ee7x::::res://assets/Platform Game Assets/Enemies/png/256x256/Pupil 256.png<>uid://db32djssj3ek0::::res://assets/Platform Game Assets/Enemies/png/256x256/new eye.png
+jumping_enemy.tscn::PackedScene::7093077129698835057::1712191438::0::1::::<><>::res://scripts/jumping_enemy.gd<>uid://s8jlthos7dqa::::res://assets/Traps/Rock Head/Idle.png
+leaderboard.tscn::PackedScene::8561102754836211458::1712191438::0::1::::<><>::res://scripts/leaderboard.gd<>res://scripts/name_input.gd
+main.tscn::PackedScene::7566720000162377610::1712191438::0::1::::<><>::uid://d21il20sanjnt::::res://assets/Background/Yellow.png<>res://scripts/bgscroll.gd<>res://scripts/main.gd<>uid://4ra7n75e2q0::::res://scenes/player.tscn
+player.tscn::PackedScene::60900846068638053::1712191437::0::1::::<><>::res://scripts/player.gd<>uid://c88pwsja5hf78::::res://assets/Main Characters/Ninja Frog/Fall (32x32).png<>uid://c3ob4as63i8ci::::res://assets/Main Characters/Ninja Frog/Run (32x32).png<>uid://d2egy5f1dhdrk::::res://assets/Main Characters/Ninja Frog/Jump (32x32).png
+playerscore.tscn::PackedScene::1635927585963818974::1712191853::0::1::::<><>::
+playerscore.gd::GDScript::-1::1712191697::0::1::::<>VBoxContainer<>::
+::res://scripts/::1712191344
+bgscroll.gd::GDScript::-1::1711416857::0::1::::<>ParallaxBackground<>::
+diving_enemy.gd::GDScript::-1::1712113643::0::1::::<>FloatingEnemy<>::
+floor_enemy.gd::GDScript::-1::1712114077::0::1::::SlidingEnemy<>CharacterBody2D<>::
+flying_enemy.gd::GDScript::-1::1712114155::0::1::::FloatingEnemy<>RigidBody2D<>::
+global.gd::GDScript::-1::1712186718::0::1::::<>Node<>::
+jumping_enemy.gd::GDScript::-1::1712125868::0::1::::<>SlidingEnemy<>::
+leaderboard.gd::GDScript::-1::1712191853::0::1::::<>Control<>::
+main.gd::GDScript::-1::1712191344::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1711515516::0::1::::<>CharacterBody2D<>::
+name_input.gd::GDScript::-1::1712190923::0::1::::<>LineEdit<>::

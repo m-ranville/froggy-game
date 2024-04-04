@@ -1,0 +1,142 @@
+[gd_scene load_steps=21 format=3 uid="uid://4ra7n75e2q0"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_csp5r"]
+[ext_resource type="Texture2D" uid="uid://c88pwsja5hf78" path="res://assets/Main Characters/Ninja Frog/Fall (32x32).png" id="2_5fkko"]
+[ext_resource type="Texture2D" uid="uid://c3ob4as63i8ci" path="res://assets/Main Characters/Ninja Frog/Run (32x32).png" id="2_pmd8m"]
+[ext_resource type="Texture2D" uid="uid://d2egy5f1dhdrk" path="res://assets/Main Characters/Ninja Frog/Jump (32x32).png" id="3_nmbm1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahbl4"]
+atlas = ExtResource("2_5fkko")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcc74"]
+atlas = ExtResource("3_nmbm1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6spe"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrksq"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf21w"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pd63"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt2qp"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p70j"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6nvo"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it478"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clbp6"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ffy8"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss2jv"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8rsu"]
+atlas = ExtResource("2_pmd8m")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aahhh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahbl4")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcc74")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6spe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrksq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf21w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pd63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt2qp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0p70j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6nvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it478")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clbp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ffy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ss2jv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8rsu")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3we1l"]
+size = Vector2(11.25, 18.75)
+
+[node name="player" type="CharacterBody2D"]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_csp5r")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_aahhh")
+animation = &"fall"
+frame_progress = 0.891087
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.625, 3.125)
+shape = SubResource("RectangleShape2D_3we1l")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.35
+one_shot = true

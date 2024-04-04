@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://wmoax5wtijn1"]
+
+[sub_resource type="Environment" id="Environment_qydmh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcqcc"]
+
+[sub_resource type="GDScript" id="GDScript_suj8b"]
+resource_name = "box"
+script/source = "extends MeshInstance3D
+
+var speed = 20
+
+func _ready() -> void:
+	pass
+
+func _physics_process(delta: float) -> void:
+	self.position.y += speed*delta
+"
+
+[node name="Node" type="Node"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.688886, -0.0666557, 0.721799, 0.101862, 0.976981, 0.187438, -0.717677, 0.202648, -0.666238, 9.08404, -0.363808, -9.43769)
+environment = SubResource("Environment_qydmh")
+current = true
+fov = 126.563
+
+[node name="box" type="MeshInstance3D" parent="."]
+gi_mode = 2
+gi_lightmap_scale = 2
+mesh = SubResource("BoxMesh_qcqcc")
+script = SubResource("GDScript_suj8b")

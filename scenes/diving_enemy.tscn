@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://dopo6lhrif7v7"]
+
+[ext_resource type="Script" path="res://scripts/diving_enemy.gd" id="1_gykjk"]
+[ext_resource type="Texture2D" uid="uid://db32djssj3ek0" path="res://assets/Platform Game Assets/Enemies/png/256x256/new eye.png" id="2_xlg3k"]
+[ext_resource type="Texture2D" uid="uid://b7bmv8m47ee7x" path="res://assets/Platform Game Assets/Enemies/png/256x256/Pupil 256.png" id="3_0palr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_22eyh"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rsuhk"]
+radius = 8.0
+
+[node name="diving_enemy" type="RigidBody2D"]
+collision_layer = 2
+mass = 0.01
+gravity_scale = 0.0
+freeze_mode = 1
+script = ExtResource("1_gykjk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_22eyh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("2_xlg3k")
+
+[node name="Pupil256" type="Sprite2D" parent="."]
+position = Vector2(-4, 2)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_0palr")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_rsuhk")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

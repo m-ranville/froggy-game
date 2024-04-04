@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpj5cwatahbw8"]
+
+[ext_resource type="PackedScene" uid="uid://8scv1hym1uly" path="res://scenes/main_menu.tscn" id="1_4g48p"]
+[ext_resource type="Script" path="res://scripts/game_combined.gd" id="1_i7wms"]
+[ext_resource type="PackedScene" uid="uid://df2m1jpyeoi8y" path="res://scenes/main.tscn" id="2_864vu"]
+
+[node name="game_combined" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i7wms")
+
+[node name="main" parent="." instance=ExtResource("2_864vu")]
+
+[node name="main_menu" parent="." instance=ExtResource("1_4g48p")]
+layout_mode = 1
+script = null
+
+[node name="secondary_button" parent="main_menu/MarginContainer/VBoxContainer" index="2"]
+process_mode = 3
+
+[connection signal="timeout" from="main/Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="main/pass_check" to="." method="_on_pass_check_body_entered"]
+[connection signal="pressed" from="main_menu/MarginContainer/VBoxContainer/menu_button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="main_menu/MarginContainer/VBoxContainer/secondary_button" to="." method="_on_secondary_button_pressed"]
+
+[editable path="main"]
+[editable path="main_menu"]

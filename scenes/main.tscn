@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://df2m1jpyeoi8y"]
+
+[ext_resource type="Texture2D" uid="uid://d21il20sanjnt" path="res://assets/Background/Yellow.png" id="1_6kr7r"]
+[ext_resource type="Script" path="res://scripts/bgscroll.gd" id="1_dw0wn"]
+[ext_resource type="PackedScene" uid="uid://4ra7n75e2q0" path="res://scenes/player.tscn" id="3_ansm1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pkt3"]
+size = Vector2(413, 88)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sus1b"]
+bg_color = Color(0.2, 0.0862745, 0.00392157, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gb10v"]
+size = Vector2(14, 115.5)
+
+[node name="main" type="Node2D"]
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2(111, 247)
+collision_layer = 5
+collision_mask = 5
+
+[node name="collisionbody" type="CollisionShape2D" parent="floor"]
+position = Vector2(86.5, 0)
+shape = SubResource("RectangleShape2D_5pkt3")
+
+[node name="Panel" type="Panel" parent="floor/collisionbody"]
+show_behind_parent = true
+offset_left = -204.0
+offset_top = -44.0
+offset_right = -22.0
+offset_bottom = 46.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sus1b")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_dw0wn")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_right = 163.0
+offset_bottom = 290.0
+texture = ExtResource("1_6kr7r")
+stretch_mode = 1
+
+[node name="player" parent="." instance=ExtResource("3_ansm1")]
+position = Vector2(20, 180)
+jump_str = 200
+gravity_str = 800
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+one_shot = true
+
+[node name="spawn_dummy" type="Area2D" parent="."]
+position = Vector2(278, 145)
+
+[node name="pass_check" type="Area2D" parent="."]
+position = Vector2(-18, -2)
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pass_check"]
+position = Vector2(-2, 151.75)
+shape = SubResource("RectangleShape2D_gb10v")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Points: "

@@ -1,0 +1,177 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt8cd18rsyuso"]
+
+[ext_resource type="Script" path="res://scripts/leaderboard.gd" id="1_gg3gt"]
+[ext_resource type="Script" path="res://scripts/name_input.gd" id="2_xyop6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byc0t"]
+bg_color = Color(0.352941, 0.0980392, 0.505882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hykyy"]
+bg_color = Color(0.313726, 0.0823529, 0.329412, 1)
+
+[node name="leaderboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_gg3gt")
+
+[node name="leaderboard" type="Panel" parent="."]
+z_index = 999
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_byc0t")
+
+[node name="MarginContainer" type="MarginContainer" parent="leaderboard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="leaderboard/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Panel2" type="Panel" parent="leaderboard/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 35)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="leaderboard/MarginContainer/VBoxContainer/Panel2"]
+layout_mode = 2
+offset_top = 4.0
+offset_right = 150.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 15
+text = "Global Leaderboard"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="leaderboard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="leaderboard/MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="leaderboard/MarginContainer/VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="scores_container" type="VBoxContainer" parent="leaderboard/MarginContainer/VBoxContainer/Panel/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 2
+
+[node name="submitnewscore_button" type="Button" parent="leaderboard/MarginContainer/VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Submit New Score"
+
+[node name="backtomenu_button" type="Button" parent="leaderboard/MarginContainer/VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Back"
+
+[node name="submit_score" type="Panel" parent="."]
+visible = false
+z_index = 1000
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = -10.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hykyy")
+
+[node name="MarginContainer" type="MarginContainer" parent="submit_score"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="submit_score/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="submit_score/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Enter your name
+(Max 3 digits)"
+horizontal_alignment = 1
+
+[node name="name_input" type="LineEdit" parent="submit_score/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "ABC"
+alignment = 1
+max_length = 3
+context_menu_enabled = false
+deselect_on_focus_loss_enabled = false
+caret_blink = true
+script = ExtResource("2_xyop6")
+
+[node name="Label2" type="Label" parent="submit_score/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+text = "Your Score: "
+horizontal_alignment = 1
+
+[node name="new_score" type="Label" parent="submit_score/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 45
+text = "53"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="submit_score/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 7
+
+[node name="back_button" type="Button" parent="submit_score/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back"
+
+[node name="upload_button" type="Button" parent="submit_score/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Submit
+"
+
+[connection signal="pressed" from="leaderboard/MarginContainer/VBoxContainer/Panel/VBoxContainer/submitnewscore_button" to="." method="_on_submitnewscore_button_pressed"]
+[connection signal="pressed" from="leaderboard/MarginContainer/VBoxContainer/Panel/VBoxContainer/backtomenu_button" to="." method="_on_backtomenu_button_pressed"]
+[connection signal="text_changed" from="submit_score/MarginContainer/VBoxContainer/name_input" to="." method="_on_name_input_text_changed"]
+[connection signal="text_changed" from="submit_score/MarginContainer/VBoxContainer/name_input" to="submit_score/MarginContainer/VBoxContainer/name_input" method="_on_text_changed"]
+[connection signal="pressed" from="submit_score/MarginContainer/VBoxContainer/HBoxContainer/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="submit_score/MarginContainer/VBoxContainer/HBoxContainer/upload_button" to="." method="_on_upload_button_pressed"]
